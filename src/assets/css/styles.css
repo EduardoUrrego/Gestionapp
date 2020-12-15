@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap");
+
+* {
+  font-family: "source sans pro";
+  padding: 0;
+  margin: 0;
+
+  --color-enf-dark-1: #222b77;
+  --color-enf-dark-2: #606dd2;
+  --color-enf-light-1: #f1f2fd;
+  --color-enf-light-2: #c0c5ed;
+
+  /* outline: 1px solid red; */
+}
+
+.main-container {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 50px);
+  margin-top: 50px;
+  background-color: var(--color-enf-light-1);
+}
+.nav-container {
+  position: absolute;
+  height: calc(100% - 50px);
+  width: 250px;
+  margin-top: 50px;
+  left: 0;
+  background-color: var(--color-enf-light-1);
+  box-shadow: 5px 0 20px 0 rgba(0, 0, 0, 0.1);
+}
+.bar-top {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: var(--color-enf-light-2);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+}
+
+.bar-top > * {
+  /* display: inline-block; */
+  /* height: 100%; */
+}
+
+.nombre-app span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.user-avatar {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #222b77;
+}
