@@ -16,7 +16,7 @@ export default {
     name: "usuarioListar",
     methods: {
         listarUsuarios() {
-            const url = "http://127.0.0.1:8000/usuario/todos/";
+            const url = "https://ancient-waters-19804.herokuapp.com/usuario/todos/";
             axiosIns.get(url).then((res) => {
                 let data = res.data;
                 let htmltext = "";

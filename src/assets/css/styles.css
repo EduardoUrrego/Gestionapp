@@ -58,3 +58,62 @@
   border-radius: 20px;
   background-color: #222b77;
 }
+
+/*Dashboard*/
+.grid-container {
+  display: grid; /* applies grid layout affecting it's children */
+  grid-template-columns: 240px 1fr; /* define the number and sizes of columns */
+  grid-template-rows: 50px 1fr 50px; /* defines the number ans sizes of rows*/
+  grid-template-areas:
+    'aside header'
+    'aside main'
+    'aside footer'; /* assigns the labeled grid-area to the grid layout, note there has to be two columns and three rows as per the grid template rows/ columns defined */
+  height: 100vh;
+}
+
+.header {
+  grid-area: header; /* assigns the grid-area label*/
+  background-color: whitesmoke;
+}
+
+.aside {
+  grid-area: aside;
+  background-color: darkblue;
+}
+
+.main {
+  grid-area: main;
+  background-color: white;
+}
+.footer {
+  grid-area: footer;
+  background-color: whitesmoke;
+}
+.header,
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: darkblue;
+    padding: 0 15px;
+  }
+  .aside {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aside_list {
+    padding: 0;
+    margin-top: 85px;
+    list-style-type: none;
+  }
+
+  .aside_list-item {
+    padding: 20px 20px 20px 40px;
+    color: #ddd;
+  }
+
+  .aside_list-item:hover {
+    background-color: royalblue;
+    cursor: pointer;
+  }
