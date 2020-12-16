@@ -45,7 +45,7 @@ export default {
 }
 .contendor-mod {
     margin: 50px auto;
-    width: 8200px;
+    width: 820px;
     padding: 20px;
     border-radius: 4px;
     background-color: #fafaff;
