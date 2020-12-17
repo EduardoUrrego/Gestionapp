@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="listarUsuarios">Listar</button>
+        <h1>Usuarios</h1>
         <div id="listaUsuarios"></div>
     </div>
 </template>
@@ -12,19 +12,16 @@ const axiosIns = axios.create({
         "Access-Control-Allow-Origin": "*",
     },
 });
-export default {
-    name: "usuarioListar",
-    methods: {
-        listarUsuarios() {
-            const url = "https://ancient-waters-19804.herokuapp.com/usuario/todos/";
-            axiosIns.get(url).then((res) => {
-                let data = res.data;
-                let htmltext = "";
-                for (let user in data) {
-                    console.log(data[user]);
+function getUsers() {
+        const url = "https://ancient-waters-19804.herokuapp.com/usuario/todos/";
+        axiosIns.get(url).then((res) => {
+            const datApi = res.data;
+            let htmltext = "";
+                for (let user in datApi) {
+                    console.log(datApi[user]);
 
                     htmltext += `<div class="campo-usuario">            
-                        <span class="nombre-usuario">${data[user].name} ${data[user].last_name}</span>
+                        <span class="nombre-usuario">${datApi[user].name} ${datApi[user].last_name}</span>
                         <div class="options">
                     <button>editar</button><button>eliminar</button>
                     </div>
@@ -32,8 +29,13 @@ export default {
 
                     listaUsuarios.innerHTML = htmltext;
                 }
-            });
-        },
-    },
+        })
+        .catch((err) => {
+            return users
+        })
+}
+getUsers();
+export default {
+    name: "usuarioListar",
 };
 </script>

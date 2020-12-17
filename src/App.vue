@@ -5,7 +5,6 @@
         <aside class="aside">
           <ul class="aside_list">
             <li class="aside_list-item">Usuarios</li>
-            <li class="aside_list-item">Ver</li>
           </ul>
         </aside>
       <main class="main"><router-view /></main>

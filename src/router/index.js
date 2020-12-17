@@ -12,7 +12,7 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: "/",
+      path: "/usuario/listar",
       name: "HelloWorld",
       component: HelloWorld
     },
@@ -32,7 +32,7 @@ export default new Router({
       component: usuarioCrear
     },
     {
-      path: "/usuario/listar",
+      path: "/",
       name: "usuarioListar",
       component: usuarioListar
     }
