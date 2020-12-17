@@ -51,6 +51,7 @@
                 <input @click="testpost" type="button" value="test" />
             </div>
         </form>
+        <router-link to="/">Volver</router-link>
     </div>
 </template>
 
@@ -68,8 +69,8 @@ export default {
     methods: {
         async consultarUsuario() {
             let usernameConsulta = username_consulta.value;
-            let url = `http://127.0.0.1:8000/usuario/${usernameConsulta}`;
-            // let url = `https://ancient-waters-19804.herokuapp.com/user/${usernameConsulta}`;
+            //let url = `http://127.0.0.1:8000/usuario/${usernameConsulta}`;
+             let url = `https://ancient-waters-19804.herokuapp.com/user/${usernameConsulta}`;
             if (usernameConsulta != "") {
                 let res = await axiosIns.get(url);
                 let data = res.data;

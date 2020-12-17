@@ -6,6 +6,7 @@
             <button @click="eliminarUsuario">Eliminar Usuario</button>
             <span id="res"></span>
         </form>
+        <router-link to="/">Volver</router-link>
     </div>
 </template>
 <script>
@@ -22,7 +23,7 @@ export default {
             console.log("entro en funcion");
             const usuario = username.value;
             console.log(usuario);
-            let url = `http://127.0.0.1:8000/usuario/eliminar/${usuario}`;
+            let url = `https://ancient-waters-19804.herokuapp.com/usuario/eliminar/${usuario}`;
             axiosIns.delete(url).then((res) => {
                 console.log(res);
             });

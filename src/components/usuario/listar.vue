@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Usuarios</h1>
+        <router-link to="/usuario/crear">Crear Usuario</router-link>
         <div id="listaUsuarios"></div>
     </div>
 </template>
@@ -21,9 +22,11 @@ function getUsers() {
                     console.log(datApi[user]);
 
                     htmltext += `<div class="campo-usuario">            
-                        <span class="nombre-usuario">${datApi[user].name} ${datApi[user].last_name}</span>
+                        <span class="nombre-usuario">${datApi[user].name} ${datApi[user].last_name} (${datApi[user].username})</span>
                         <div class="options">
-                    <button>editar</button><button>eliminar</button>
+                        
+                    <a href="#/usuario/modificar"><button>Editar</button></a>
+                    <a href="#/usuario/eliminar"><button>Eliminar</button></a>
                     </div>
                     </div>`;
 
@@ -34,6 +37,7 @@ function getUsers() {
             return users
         })
 }
+getUsers();
 getUsers();
 export default {
     name: "usuarioListar",

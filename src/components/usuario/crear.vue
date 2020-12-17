@@ -31,6 +31,7 @@
                 />
             </div>
         </form>
+        <router-link to="/">Volver</router-link>
     </div>
 </template>
 
@@ -48,7 +49,7 @@ export default {
                 last_name: apellido.value,
                 email: email.value,
             };
-            let url = "http://127.0.0.1:8000/usuario/crear";
+            let url = "https://ancient-waters-19804.herokuapp.com/usuario/crear";
             axios.post(url, usuarioNuevo).then((res) => {
                 console.log(res.data);
             });
