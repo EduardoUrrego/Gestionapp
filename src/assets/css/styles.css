@@ -97,7 +97,7 @@
 .mod-listar-usuario {
   width: 750px;
   background-color: var(--color-enf-light-1);
-  box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 2rem 3rem;
 }
@@ -156,25 +156,19 @@
   background-color: #606dd2;
   color: var(--color-enf-light-1);
   text-decoration: none;
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 4px;
   font-size: 0.8rem;
   border: none;
   font-weight: 600;
+  cursor: pointer;
 }
 .link-crear:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .link-crear::before {
   content: "+";
-  background-color: #606dd2;
-  color: var(--color-enf-light-1);
-  text-decoration: none;
-  padding: 5px;
-  font-weight: 900;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  border: none;
+  margin-right: 5px;
 }
 .mod-header {
   display: flex;
