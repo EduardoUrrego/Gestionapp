@@ -31,3 +31,30 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+* {
+/* outline: 1px solid #7a7adb; */
+}
+.contendor-mod {
+    margin: 50px auto;
+    width: 820px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #fafaff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+.campo-input {
+    margin: 10px 0;
+}
+.campo-input input {
+    width: 100%;
+    border-radius: 4px;
+}
+.contendor-mod label {
+    display: block;
+    /* width: 100%; */
+    /* color: red; */
+    /* background-color: #191975; */
+}
+</style>
