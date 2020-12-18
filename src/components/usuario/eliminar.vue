@@ -1,10 +1,12 @@
 <template>
-    <div>
+    <div class="contendor-mod">
         <h2>Modulo Usuario - Eliminar</h2>
         <form action="">
-            <input id="username" type="text" />
-            <button @click="eliminarUsuario">Eliminar Usuario</button>
-            <span id="res"></span>
+            <div class="campo-input">
+              <input id="username" type="text" />
+              <button @click="eliminarUsuario">Eliminar Usuario</button>
+              <span id="res"></span>
+            </div>  
         </form>
         <router-link to="/">Volver</router-link>
     </div>
