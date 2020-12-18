@@ -13,8 +13,8 @@ export default new Router({
   routes: [
     {
       path: "/usuario/listar",
-      name: "HelloWorld",
-      component: HelloWorld
+      name: "usuarioListar",
+      component: usuarioListar
     },
     {
       path: "/usuario/modificar",
