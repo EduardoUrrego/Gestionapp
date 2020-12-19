@@ -70,7 +70,7 @@ export default {
         async consultarUsuario() {
             let usernameConsulta = username_consulta.value;
             //let url = `http://127.0.0.1:8000/usuario/${usernameConsulta}`;
-             let url = `https://ancient-waters-19804.herokuapp.com/user/${usernameConsulta}`;
+            let url = `https://ancient-waters-19804.herokuapp.com/usuario/${usernameConsulta}`;
             if (usernameConsulta != "") {
                 let res = await axiosIns.get(url);
                 let data = res.data;
@@ -104,8 +104,8 @@ export default {
 
             console.log(dataUpdate);
 
-            let url = `http://127.0.0.1:8000/usuario/actualizar`;
-            // let url = `https://ancient-waters-19804.herokuapp.com/users`;
+            // let url = `http://127.0.0.1:8000/usuario/actualizar`;
+            let url = `https://ancient-waters-19804.herokuapp.com/usuario/actualizar`;
 
             axiosIns.put(url, dataUpdate).then((res) => {
                 console.log(res);
