@@ -5,8 +5,12 @@
             <span class="nombre-usuario"> {{ buildName }} </span>
         </div>
         <div class="options">
-            <a href="#/usuario/modificar"><button>Editar</button></a>
-            <a href="#/usuario/eliminar"><button>Eliminar</button></a>
+            <router-link :to="'/usuario/modificar/' + username" >
+                <button>Editar</button>
+            </router-link>
+            <router-link :to="'/usuario/eliminar/' + username" >
+                <button>Eliminar</button>
+            </router-link>
         </div>
     </div>
 </template>

@@ -38,7 +38,6 @@ export default {
             this.axiosIns
                 .get(url)
                 .then((res) => {
-                    const datApi = res.data;
                     this.listUsers = res.data;
                 })
                 .catch((err) => {
