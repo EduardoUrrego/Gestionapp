@@ -1,15 +1,5 @@
 <template>
     <div class="container-mod">
-        <form name="usuario_consultar">
-            <div class="">
-                <input id="username_consulta" type="text" />
-                <input
-                    @click="consultarUsuario"
-                    type="button"
-                    value="Consultar Usuario"
-                />
-            </div>
-        </form>
         <form name="usuario_modificar">
             <div class="">
                 <label for="">
@@ -20,7 +10,7 @@
             <div class="">
                 <label for="">
                     Contraseña:
-                    <input id="password" type="text" />
+                    <input type="password" id="password" />
                 </label>
             </div>
             <div class="">
@@ -38,7 +28,7 @@
             <div class="">
                 <label for="">
                     Correo Electronico:
-                    <input id="email" type="text" />
+                    <input id="email" type="email" />
                 </label>
             </div>
             <div>
@@ -47,8 +37,8 @@
                     type="button"
                     value="Modificar"
                 />
-                <input @click="crearUsuario" type="button" value="crear" />
-                <input @click="testpost" type="button" value="test" />
+              <!--  <input @click="crearUsuario" type="button" value="crear" /> -->
+              <!--  <input @click="testpost" type="button" value="test" />  -->
             </div>
         </form>
         <router-link to="/">Volver</router-link>
@@ -66,9 +56,12 @@ const axiosIns = axios.create({
 
 export default {
     name: "usuarioModificar",
+    created: function(){
+    this.consultarUsuario();
+    },
     methods: {
         async consultarUsuario() {
-            let usernameConsulta = username_consulta.value;
+            let usernameConsulta = this.$route.params.username;
             //let url = `http://127.0.0.1:8000/usuario/${usernameConsulta}`;
             let url = `https://ancient-waters-19804.herokuapp.com/usuario/${usernameConsulta}`;
             if (usernameConsulta != "") {

@@ -3,7 +3,7 @@
         <h2>Modulo Usuario - Eliminar</h2>
         <form action="">
             <div class="campo-input">
-              <input id="username" type="text" />
+              <input id="username" type="text" v-model="username"/>
               <button @click="eliminarUsuario">Eliminar Usuario</button>
               <span id="res"></span>
             </div>  
@@ -20,6 +20,7 @@ const axiosIns = axios.create({
 });
 export default {
     name: "usuarioEliminar",
+    props: ["username"],
     methods: {
         async eliminarUsuario() {
             console.log("entro en funcion");
