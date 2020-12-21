@@ -11,7 +11,7 @@
   --color-enf-light-1: #f1f2fd;
   --color-enf-light-2: #c0c5ed;
 
-  /* outline: 1px solid red; */
+ 
 }
 
 .header {
@@ -254,3 +254,31 @@
   font-weight: 600;
   padding: 0.5rem 1rem;
 }
+
+.opciones-inicio {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2,1fr);
+
+}
+
+.opcion-imagen {
+  width: 20px;
+}
+
+
+
+.nombre-app a{
+  text-decoration: none;
+  color: var(--color-enf-dark-1)
+
+}
+
+/* .imgcliente {
+  background-image: url("../img/Clienteimagen.jpg");
+}
+
+.imgusuario {
+  background-image: url("../img/Usuarioimagen.jpg");
+} */
+

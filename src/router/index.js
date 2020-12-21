@@ -5,7 +5,7 @@ import usuarioModificar from "@/components/usuario/modificar";
 import usuarioCrear from "@/components/usuario/crear";
 import usuarioEliminar from "@/components/usuario/eliminar";
 import usuarioListar from "@/components/usuario/listar";
-
+import Home from "@/components/Home";
 import clienteCrear from "@/components/cliente/crear";
 import clienteModificar from "@/components/cliente/modificar";
 
@@ -46,6 +46,7 @@ export default new Router({
     {
       path: "/cliente/modificar/:codigo",
       name: "clienteModificar",
+      props: true,
       component: clienteModificar
     },
 
@@ -54,5 +55,12 @@ export default new Router({
       name: "clienteListar",
       component: clienteListar
     },
+    {
+      path: "/",
+      name: "Home",
+      component: Home
+    },
+
+    
   ]
 });

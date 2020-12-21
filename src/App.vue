@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <header class="header">
-            <span class="nombre-app">GestionApp</span>
+            <span class="nombre-app"><a href="/">GestionApp</a></span>
             <div class="user-avatar"></div>
         </header>
         <main class="main">
