@@ -8,14 +8,14 @@
                 <div class="opcion-inicio">
                     <span class="opcion-titulo">Usuarios</span>
                 <router-link to="/usuario">
-                    <div class="opcion-imagen imgusuario"></div>
+                    <div class="opcion-imagen"></div>
                 </router-link>
                 </div>
                 
                 <div class="opcion-inicio">
                     <span class="opcion-titulo">Clientes</span>
                 <router-link to="/cliente">
-                    <div class="opcion-imagen imgcliente"></div>
+                    <div class="opcion-imagen"></div>
                 </router-link>
                 </div>
 
