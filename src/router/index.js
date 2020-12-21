@@ -6,6 +6,9 @@ import usuarioCrear from "@/components/usuario/crear";
 import usuarioEliminar from "@/components/usuario/eliminar";
 import usuarioListar from "@/components/usuario/listar";
 
+import clienteCrear from "@/components/cliente/crear";
+import clienteModificar from "@/components/cliente/modificar";
+
 Vue.use(Router);
 
 export default new Router({
@@ -28,9 +31,19 @@ export default new Router({
       component: usuarioCrear
     },
     {
-      path: "/",
+      path: "/usuario",
       name: "usuarioListar",
       component: usuarioListar
+    },
+    {
+      path: "/cliente/crear",
+      name: "clienteCrear",
+      component: clienteCrear
+    },
+    {
+      path: "/cliente/modificar",
+      name: "clienteModificar",
+      component: clienteModificar
     }
   ]
 });

@@ -37,11 +37,11 @@
                     type="button"
                     value="Modificar"
                 />
-              <!--  <input @click="crearUsuario" type="button" value="crear" /> -->
-              <!--  <input @click="testpost" type="button" value="test" />  -->
+                <!--  <input @click="crearUsuario" type="button" value="crear" /> -->
+                <!--  <input @click="testpost" type="button" value="test" />  -->
             </div>
         </form>
-        <router-link to="/">Volver</router-link>
+        <router-link to="/usuario">Volver</router-link>
     </div>
 </template>
 
@@ -56,8 +56,8 @@ const axiosIns = axios.create({
 
 export default {
     name: "usuarioModificar",
-    created: function(){
-    this.consultarUsuario();
+    created: function () {
+        this.consultarUsuario();
     },
     methods: {
         async consultarUsuario() {
@@ -95,62 +95,17 @@ export default {
                 password: password.value,
             };
 
-            console.log(dataUpdate);
-
             // let url = `http://127.0.0.1:8000/usuario/actualizar`;
             let url = `https://ancient-waters-19804.herokuapp.com/usuario/actualizar`;
 
             axiosIns.put(url, dataUpdate).then((res) => {
-                console.log(res);
-            });
-
-            // fetch(url, {
-            //     method: "PUT",
-            //     cors: "no-cors",
-            //     body: JSON.stringify(dataUpdate),
-            // })
-            //     .then((res) => {
-            //         return res.json();
-            //     })
-            //     .then((data) => {
-            //         console.log(data);
-            //     });
-        },
-        async crearUsuario() {
-            let dataUpdate = {
-                username: username.value,
-                email: email.value,
-                last_name: lastname.value,
-                name: nombre.value,
-                password: password.value,
-            };
-
-            let url = `http://127.0.0.1:8000/usuario/crear`;
-            // let url = `https://ancient-waters-19804.herokuapp.com/usuario/crear`;
-            // axiosIns.put(url, dataUpdate).then((res) => {
-            //     console.log(res);
-            // });
-
-            fetch(url, {
-                method: "POST",
-                body: JSON.stringify(dataUpdate),
-            })
-                .then((res) => {
-                    console.log(res);
-                    return res.json();
-                })
-                .then((data) => {
-                    console.log(data);
-                });
-        },
-        testpost() {
-            let url = `http://127.0.0.1:8000/testpost`;
-            let urlp = `http://127.0.0.1:8000/testput`;
-            axiosIns.post(url).then((res) => {
-                console.log(res.data);
-            });
-            axiosIns.put(urlp).then((res) => {
-                console.log(res.data);
+                let status = res.status;
+                let statusText = res.statusText;
+                if (status == 200 && statusText == "OK") {
+                    alert("Usuario modificado");
+                } else {
+                    alert("Se ha presentado un error en la modificacion");
+                }
             });
         },
     },

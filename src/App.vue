@@ -11,12 +11,12 @@
             <ul class="list-group">
                 <span class="list-title">Usuario</span>
                 <li class="list-item"><a href="#/usuario/Crear">Crear</a></li>
-                <li class="list-item"><a href="#/">Ver</a></li>
+                <li class="list-item"><a href="#/usuario">Ver</a></li>
             </ul>
             <ul class="list-group">
                 <span class="list-title">Cliente</span>
-                <li class="list-item"><a href="#/usuario/Crear">Crear</a></li>
-                <li class="list-item"><a href="#/">Listar</a></li>
+                <li class="list-item"><a href="#/cliente/Crear">Crear</a></li>
+                <li class="list-item"><a href="#/cliente">Listar</a></li>
             </ul>
         </nav>
 

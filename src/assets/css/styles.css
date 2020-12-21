@@ -179,3 +179,74 @@
 .mod-title {
   color: #222b77;
 }
+.campo-input {
+  margin-bottom: 0.75rem;
+}
+.campo-input > label,
+.campo-input > input {
+  display: block;
+  width: 100%;
+}
+.campo-input > label {
+  font-size: 0.9rem;
+  color: var(--color-enf-dark-2);
+}
+
+.campo-input > input {
+  border: none;
+  border-radius: 0.25rem;
+  line-height: 2rem;
+  box-shadow: 0 0 0 1px var(--color-enf-light-2) inset;
+  padding-left: 0.5rem;
+  color: var(--color-enf-dark-1);
+  font-size: 1rem;
+}
+.campo-input > input:focus {
+  box-shadow: 0 0 0 1px var(--color-enf-dark-1) inset;
+  outline: none;
+}
+
+.campo-input-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+  padding-left: 1rem;
+}
+.campo-input-check input {
+  margin-right: 0.5rem;
+}
+.campo-input-check label {
+  color: var(--color-enf-dark-1);
+}
+.contendor-mod {
+  width: 550px;
+  background-color: var(--color-enf-light-1);
+  box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 2rem 3rem;
+}
+
+.mod__header {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--color-enf-dark-2);
+  margin-bottom: 1rem;
+}
+
+.campo-input-x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1rem;
+}
+.flow-between {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-enf-dark-2);
+  color: var(--color-enf-light-1);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
