@@ -1,53 +1,70 @@
 <template>
-    <div class="mod-listar-usuario">
+    <div class="mod-listar-cliente">
         <div class="mod-header">
-            <h1 class="mod-title">Usuarios</h1>
+            <h1 class="mod-title">Clientes</h1>
+            <router-link to="/cliente/crear"
+                ><button class="link-crear">Crear Cliente</button></router-link
+            >
 
-            <router-link to="/usuario/crear"
-                ><button class="link-crear">Crear Usuario</button></router-link
-            >
         </div>
-        <div id="listaUsuarios">
-            <item-user
-                v-for="(user, k) in listUsers"
+                
+       
+        <div id="listaCliente">
+            <item-customer
+
+                v-for="(customer, k) in listCustomers"  
+
+
                 v-bind:key="k"
-                :lastname="user.last_name"
-                :name="user.name"
-                :username="user.username"
+                :lastname="customer.last_name"
+                :name="customer.name"
+                :codigo="customer.codigo"
             >
-            </item-user>
+            </item-customer>
         </div>
     </div>
+    
+
+    
+    
 </template>
 <script>
 import axios from "axios";
-import ItemUser from "../ItemUser.vue";
+
+import ItemCustomer from '../ItemCustomer';
 
 export default {
-    name: "usuarioListar",
+    name: "clienteListar",
     components: {
-        ItemUser,
+
+        
+        ItemCustomer
+
     },
     methods: {
         count() {
             return ++counter;
         },
-        getUsers() {
-            const url =
-                "https://ancient-waters-19804.herokuapp.com/usuario/todos/";
+        getCustomers(){
+            // const url =
+                // "https://ancient-waters-19804.herokuapp.com/customer/todos/";
+                const url="http://127.0.0.1:8000/customer/todos/";
+
+
             this.axiosIns
                 .get(url)
                 .then((res) => {
-                    this.listUsers = res.data;
+                    this.listCustomers = res.data;
+                    
                 })
                 .catch((err) => {
-                    return users;
+                    return costumers;
                 });
         },
     },
     data() {
         return {
-            listUsers: [],
+            listCustomers: [],
             counter: 0,
             axiosIns: axios.create({
                 headers: {
@@ -57,7 +74,7 @@ export default {
         };
     },
     mounted() {
-        this.getUsers();
+        this.getCustomers();
     },
 };
 </script>

@@ -93,7 +93,7 @@
   border-radius: 20px;
   background-color: var(--color-enf-dark-1);
 }
-
+.mod-listar-cliente,
 .mod-listar-usuario {
   width: 750px;
   background-color: var(--color-enf-light-1);
@@ -101,6 +101,8 @@
   border-radius: 10px;
   padding: 2rem 3rem;
 }
+
+.campo-cliente,
 .campo-usuario {
   width: 100%;
   height: 32px;
@@ -113,9 +115,11 @@
   align-items: center;
   transition: background-color 0.2s;
 }
+.campo-cliente:hover,
 .campo-usuario:hover {
   background-color: #c0c5ed;
 }
+.nombre-cliente,
 .nombre-usuario {
   display: inline-block;
   text-align: center;
