@@ -1,47 +1,36 @@
 <template>
-    <div class="container-mod">
-        <form name="usuario_modificar">
-            <div class="">
-                <label for="">
-                    Username:
-                    <input id="username" type="text" />
-                </label>
+    <div class="contendor-mod">
+        <div class="mod__header">
+            <span class="mod__title"> Modulo Usuario - Modificar </span>
+        </div>
+        <div class="mod__content">
+            <div class="campo-input">
+                <label for=""> Username: </label>
+                <input id="username" type="text" />
             </div>
-            <div class="">
-                <label for="">
-                    Contraseña:
-                    <input type="password" id="password" />
-                </label>
+            <div class="campo-input">
+                <label for=""> Contraseña: </label>
+                <input type="password" id="password" />
             </div>
-            <div class="">
-                <label for="">
-                    Nombre:
-                    <input id="nombre" type="text" />
-                </label>
+            <div class="campo-input">
+                <label for=""> Nombre: </label>
+                <input id="nombre" type="text" />
             </div>
-            <div class="">
-                <label for="">
-                    Apellido:
-                    <input id="lastname" type="text" />
-                </label>
+            <div class="campo-input">
+                <label for=""> Apellido: </label>
+                <input id="lastname" type="text" />
             </div>
-            <div class="">
-                <label for="">
-                    Correo Electronico:
-                    <input id="email" type="email" />
-                </label>
+            <div class="campo-input">
+                <label for=""> Correo Electronico: </label>
+                <input id="email" type="email" />
             </div>
-            <div>
-                <input
-                    @click="modificarUsuario"
-                    type="button"
-                    value="Modificar"
-                />
-                <!--  <input @click="crearUsuario" type="button" value="crear" /> -->
-                <!--  <input @click="testpost" type="button" value="test" />  -->
+            <div class="campo-input flow-between">
+                <router-link to="/usuario">Volver</router-link>
+                <button class="btn" @click="modificarUsuario">
+                    Modificar Usuario
+                </button>
             </div>
-        </form>
-        <router-link to="/usuario">Volver</router-link>
+        </div>
     </div>
 </template>
 

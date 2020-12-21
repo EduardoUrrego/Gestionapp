@@ -1,14 +1,23 @@
 <template>
     <div class="contendor-mod">
-        <h2>Modulo Usuario - Eliminar</h2>
-        <form action="">
+        <div class="mod__header">
+            <span class="mod__title">Modulo Usuario - Eliminar</span>
+        </div>
+        <div class="mod__content">
             <div class="campo-input">
-              <input id="username" type="text" v-model="username"/>
-              <button @click="eliminarUsuario">Eliminar Usuario</button>
-              <span id="res"></span>
-            </div>  
-        </form>
-        <router-link to="/">Volver</router-link>
+                <label for="">username</label>
+                <input id="username" type="text" v-model="username" />
+            </div>
+            <div class="campo-input flow-between">
+                <router-link to="/usuario">Volver</router-link>
+                <button class="btn" @click="eliminarUsuario">
+                    Eliminar Usuario
+                </button>
+            </div>
+            <div class="campo-input">
+                <span id="res"></span>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -37,7 +46,7 @@ export default {
 
 <style scoped>
 * {
-/* outline: 1px solid #7a7adb; */
+    /* outline: 1px solid #7a7adb; */
 }
 .contendor-mod {
     margin: 50px auto;

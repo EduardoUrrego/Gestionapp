@@ -22,16 +22,11 @@
                 <label for=""> Contraseña </label>
                 <input id="password" type="password" />
             </div>
-            <div class="campo-input">
-                <input
-                    @click="crearUsuario"
-                    form="crear_usaurio"
-                    type="button"
-                    value="Crear Usuario"
-                />
+            <div class="campo-input flow-between">
+                <router-link to="/usuario">Volver</router-link>
+                <button class="btn" @click="crearUsuario">Crear Usuario</button>
             </div>
         </form>
-        <router-link to="/">Volver</router-link>
     </div>
 </template>
 
