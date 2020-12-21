@@ -47,8 +47,8 @@ export default {
         },
         getCustomers(){
             // const url =
-                // "https://ancient-waters-19804.herokuapp.com/customer/todos/";
-                const url="http://127.0.0.1:8000/customer/todos/";
+                const url= "https://ancient-waters-19804.herokuapp.com/customer/todos/";
+                // const url="http://127.0.0.1:8000/customer/todos/";
 
 
             this.axiosIns

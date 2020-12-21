@@ -3,7 +3,7 @@
         <h2>Modulo Usuario - Eliminar</h2>
         <form action="">
             <div class="campo-input">
-              <input id="username" type="text" v-model="username"/>
+              <input id="username" type="text" v-model="codigo"/>
               <button @click="eliminarUsuario">Eliminar Usuario</button>
               <span id="res"></span>
             </div>  

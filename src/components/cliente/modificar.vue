@@ -4,8 +4,6 @@
             <span class="mod__title">Modulo Cliente - Modificar</span>
         </div>
         <div class="mod__content">
-            <input type="text" v-model="codigo_consulta" />
-            <button @click="consultarCliente">consulta</button>
             <form name="crear_cliente" action="">
                 <div class="campo-input">
                     <label for=""> Codigo </label>
@@ -104,15 +102,15 @@ export default {
             genero: "",
         };
     },
-    // created: function () {
-    //     this.consultarCliente();
-    // },
+     created: function () {
+         this.consultarCliente();
+    },
     methods: {
         async consultarCliente() {
-            let codigo = this.codigo_consulta;
-            // let codigo = this.$route.params.username;
-            let url = `http://127.0.0.1:8000/customer/${codigo}`;
-            // let url = `https://ancient-waters-19804.herokuapp.com/usuario/${usernameConsulta}`;
+           // let codigo = this.codigo_consulta;
+             let codigo = this.$route.params.codigo;
+            // let url = `http://127.0.0.1:8000/customer/${codigo}`;
+             let url = `https://ancient-waters-19804.herokuapp.com/customer/${codigo}`;
             if (codigo != "") {
                 let res = await axiosIns.get(url);
                 let data = res.data;
@@ -152,8 +150,8 @@ export default {
 
             console.log(dataUpdate);
 
-            let url = `http://127.0.0.1:8000/customer/actualizar`;
-            // let url = `https://ancient-waters-19804.herokuapp.com/usuario/actualizar`;
+           // let url = `http://127.0.0.1:8000/customer/actualizar`;
+            let url = `https://ancient-waters-19804.herokuapp.com/usuario/actualizar`;
 
             axiosIns.put(url, dataUpdate).then((res) => {
                 console.log(res);

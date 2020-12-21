@@ -124,8 +124,8 @@ export default {
                 celular: this.celular,
                 genero: this.genero,
             };
-            // // let url = "https://ancient-waters-19804.herokuapp.com/customer/crear";
-            let url = "http://127.0.0.1:8000/customer/crear";
+            let url = "https://ancient-waters-19804.herokuapp.com/customer/crear";
+            //let url = "http://127.0.0.1:8000/customer/crear";
             axios.post(url, clienteNuevo).then((res) => {
                 console.log(res.data);
             });
